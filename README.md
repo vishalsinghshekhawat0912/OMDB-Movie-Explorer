@@ -46,19 +46,18 @@ The project is built with a **Node.js backend** and a **React frontend**, follow
 ## Environment Variables
 
 ### Backend `.env`(root level of project)
-BACKEND_PORT=8080
-OMDB_BASE_URL=https://www.omdbapi.com/
-
-OMDB_API_KEY=your_omdb_api_key
-REDIS_URL=redis://localhost:6379
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=*****
-DB_NAME=omdb movie explorer
-DB_PORT=3306
+-BACKEND_PORT=8080
+-OMDB_BASE_URL=https://www.omdbapi.com/
+-OMDB_API_KEY=your_omdb_api_key
+-REDIS_URL=redis://localhost:6379
+-DB_HOST=localhost
+-DB_USER=root
+-DB_PASSWORD=*****
+-DB_NAME=omdb movie explorer
+-DB_PORT=3306
 
 ### Frontend `.env`(inside frontend folder)
-REACT_APP_BACKEND_URL="http://localhost:8080/"
+-REACT_APP_BACKEND_URL="http://localhost:8080/"
 
 > API keys are securely handled in the backend and are never exposed to the frontend.
 
@@ -147,13 +146,12 @@ CREATE TABLE favourites (
 ## How to Run Locally
 
 ### 1. Backend
-cd backend
-npm install
-npm run dev
+-cd backend
+-npm install
+-npm run dev
 
 ## 2. Frontend
-cd frontend
-npm install
-npm start
-
-Open in browser: http://localhost:3000
+-cd frontend
+-npm install
+-npm start
+-Open in browser: http://localhost:3000
