@@ -1,0 +1,59 @@
+.movie-card {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 20px;
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 20px 0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.7);
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.movie-info h2 {
+  margin: 0 0 10px;
+  font-size: 1.4rem;
+  color: #facc15;
+}
+
+.movie-info p {
+  margin: 5px 0;
+  line-height: 1.4;
+}
+
+.fav-btn {
+  background: transparent;
+  border: 1px solid #facc15;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  color: #facc15;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.fav-btn:hover {
+  background: #facc15;
+  color: #0f172a;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .movie-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .movie-info {
+    text-align: left;
+  }
+}
