@@ -46,18 +46,18 @@ The project is built with a **Node.js backend** and a **React frontend**, follow
 ## Environment Variables
 
 ### Backend `.env`(root level of project)
--BACKEND_PORT=8080
--OMDB_BASE_URL=https://www.omdbapi.com/
--OMDB_API_KEY=your_omdb_api_key
--REDIS_URL=redis://localhost:6379
--DB_HOST=localhost
--DB_USER=root
--DB_PASSWORD=*****
--DB_NAME=omdb movie explorer
--DB_PORT=3306
+BACKEND_PORT=8080
+OMDB_BASE_URL=https://www.omdbapi.com/
+OMDB_API_KEY=your_omdb_api_key
+REDIS_URL=redis://localhost:6379
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=*****
+DB_NAME=omdb movie explorer
+DB_PORT=3306
 
 ### Frontend `.env`(inside frontend folder)
--REACT_APP_BACKEND_URL="http://localhost:8080/"
+REACT_APP_BACKEND_URL="http://localhost:8080/"
 
 > API keys are securely handled in the backend and are never exposed to the frontend.
 
@@ -96,11 +96,10 @@ The OMDB API is **not called directly from the frontend** to:
 - Click on Favourite Movie Card to see full details
 
 ## Favorite Table create Query
-CREATE TABLE favourites (
+    CREATE TABLE favourites (
     title VARCHAR(255) NOT NULL,
     year VARCHAR(10) NOT NULL,
     type VARCHAR(50) NOT NULL,     -- movie / series / episode
-
     poster TEXT NULL,
     director VARCHAR(255) NULL,
     actors TEXT NULL,
@@ -111,11 +110,9 @@ CREATE TABLE favourites (
     language VARCHAR(100) NULL,
     time VARCHAR(50) NULL,
     collection VARCHAR(100) NULL,
-
     created_at TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP
         ON UPDATE CURRENT_TIMESTAMP,
-
     PRIMARY KEY (title, year, type)
 );
 
@@ -146,12 +143,13 @@ CREATE TABLE favourites (
 ## How to Run Locally
 
 ### 1. Backend
--cd backend
--npm install
--npm run dev
+cd backend
+npm install
+npm run dev
 
 ## 2. Frontend
--cd frontend
--npm install
--npm start
--Open in browser: http://localhost:3000
+cd frontend
+npm install
+npm start
+
+Open in browser: http://localhost:3000
